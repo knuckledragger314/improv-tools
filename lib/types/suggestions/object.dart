@@ -78,6 +78,7 @@ abstract class Objects {
       'vanilla bean',
       'volume knob',
       'water hose',
+      'whoopie cushion'
       'waffle maker',
       'bottle of Windex',
       'X-Men comic book',
