@@ -13,10 +13,13 @@ class SuggestionButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ElevatedButton(
-        style: ElevatedButton.styleFrom(backgroundColor: Colors.yellow, foregroundColor: Colors.deepPurple, minimumSize: const Size(250,40)),
+        style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.yellow,
+            foregroundColor: Colors.deepPurple,
+            minimumSize: const Size(250, 40)),
         onPressed: () {
           var result = [];
-            result = getter;
+          result = getter;
           final random = Random();
           var i = random.nextInt(result.length);
           var text = result[i];
@@ -38,7 +41,9 @@ class SuggestionButton extends StatelessWidget {
                     ),
                     const SizedBox(height: 15),
                     ElevatedButton(
-                      style: ElevatedButton.styleFrom(backgroundColor: Colors.yellow, foregroundColor: Colors.deepPurple),
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.yellow,
+                          foregroundColor: Colors.deepPurple),
                       onPressed: () {
                         Navigator.pop(context);
                       },
@@ -57,7 +62,3 @@ class SuggestionButton extends StatelessWidget {
     );
   }
 }
-
-
-
-

@@ -1,10 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
-
 class CountdownTimer extends StatefulWidget {
   const CountdownTimer({super.key});
-
 
   @override
   State<CountdownTimer> createState() => _CountdownTimerState();
@@ -24,24 +22,22 @@ class _CountdownTimerState extends State<CountdownTimer> {
     const oneSec = Duration(seconds: 1);
     _timer = Timer.periodic(
       oneSec,
-          (Timer timer) =>
-          setState(
-                () {
-              debugPrint('count down - $_timer');
-              if (_start < 1) {
-                //_start = '${_start.inMinutes.remainder(60)}:${(_start.inSeconds.remainder(60) % 60).padLeft(2, '0')}' as int;
-                _timer.cancel();
-              } else {
-                _start = _start - 1;
-                var mins = _start / 60;
-                var wholeMins = mins.floor();
-                var seconds = _start % 60;
-                time = _start % 60 > 9
-                    ? '$wholeMins:$seconds'
-                    : '$wholeMins:0$seconds';
-              }
-            },
-          ),
+      (Timer timer) => setState(
+        () {
+          debugPrint('count down - $_timer');
+          if (_start < 1) {
+            _timer.cancel();
+          } else {
+            _start = _start - 1;
+            var mins = _start / 60;
+            var wholeMins = mins.floor();
+            var seconds = _start % 60;
+            time = _start % 60 > 9
+                ? '$wholeMins:$seconds'
+                : '$wholeMins:0$seconds';
+          }
+        },
+      ),
     );
   }
 
@@ -66,10 +62,7 @@ class _CountdownTimerState extends State<CountdownTimer> {
           decoration: const BoxDecoration(
               color: Color(0xFFF3E5F5),
               borderRadius: BorderRadius.all(Radius.circular(10))),
-          width: MediaQuery
-              .of(context)
-              .size
-              .width / 2,
+          width: MediaQuery.of(context).size.width / 2,
           child: Center(
             child: Text(
               time,
@@ -83,30 +76,30 @@ class _CountdownTimerState extends State<CountdownTimer> {
         Visibility(
           visible: !isCounting,
           child: ElevatedButton.icon(
-            icon: const Icon(
-                Icons.play_arrow),
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-            onPressed: () {
-              !isCounting && time == '5:00' ? startTimer(300) : unPauseTimer();
-              setState(() {
-                isCounting ? isCounting = false : isCounting = true;
-              });
-            },
-            label: !isCounting && time == '5:00'
-                ? const Text('START',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700))
-                : const Text('UNPAUSE',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700))
-
-          ),
+              icon: const Icon(Icons.play_arrow),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+              onPressed: () {
+                !isCounting && time == '5:00'
+                    ? startTimer(300)
+                    : unPauseTimer();
+                setState(() {
+                  isCounting ? isCounting = false : isCounting = true;
+                });
+              },
+              label: !isCounting && time == '5:00'
+                  ? const Text('START',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w700))
+                  : const Text('UNPAUSE',
+                      style: TextStyle(
+                          fontSize: 16, fontWeight: FontWeight.w700))),
         ),
 
         //PAUSE
         Visibility(
           visible: isCounting,
           child: ElevatedButton.icon(
-            icon: const Icon(
-                Icons.pause),
+            icon: const Icon(Icons.pause),
             style: ElevatedButton.styleFrom(backgroundColor: Colors.orange),
             onPressed: () {
               pauseTimer();
@@ -132,8 +125,7 @@ class _CountdownTimerState extends State<CountdownTimer> {
                 });
               },
               label: const Text('RESET',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700))
-          ),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700))),
         ),
       ],
     );

@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class MultiSelectChip extends StatefulWidget {
@@ -6,7 +5,11 @@ class MultiSelectChip extends StatefulWidget {
   final List<String> selectedChoices;
   final Function(List<String>) onSelectionChanged;
 
-  const MultiSelectChip({required this.chipFilterList, super.key, required this.onSelectionChanged, required this.selectedChoices});
+  const MultiSelectChip(
+      {required this.chipFilterList,
+      super.key,
+      required this.onSelectionChanged,
+      required this.selectedChoices});
 
   @override
   State<MultiSelectChip> createState() => _MultiSelectChipState();
