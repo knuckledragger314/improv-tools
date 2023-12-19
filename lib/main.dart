@@ -58,8 +58,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Improv Tools'),
+          title: const Text('Improv Tools', style: TextStyle(color: Colors.white),),
           backgroundColor: Colors.deepPurple,
+          iconTheme: const IconThemeData(color: Colors.white),
         ),
         drawer: Drawer(
           child: ListView.builder(
@@ -112,7 +113,7 @@ class Suggestions extends StatelessWidget {
               SuggestionButton(getter: Objects.getObjects(), type: 'object'),
               SuggestionButton(
                   getter: Problem.getProblems(),
-                  type: 'problem they\'re trying to solve or deal with'),
+                  type: 'problem they\'re trying to solve'),
               SuggestionButton(
                   getter: UnusualEvent.getUnusualEvents(),
                   type: 'unusual event'),
