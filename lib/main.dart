@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Improv Tools', style: TextStyle(color: Colors.white),),
+          title: const Text('Improv Tools', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),),
           backgroundColor: Colors.deepPurple,
           iconTheme: const IconThemeData(color: Colors.white),
         ),
