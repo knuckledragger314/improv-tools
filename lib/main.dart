@@ -8,6 +8,7 @@ import 'package:flutter_project_new_mac/types/suggestions/place.dart';
 import 'package:flutter_project_new_mac/types/suggestions/problem_to_solve.dart';
 import 'package:flutter_project_new_mac/types/suggestions/unusual_event.dart';
 import 'package:flutter_project_new_mac/widgets/countdown.dart';
+import 'package:flutter_project_new_mac/widgets/feedback.dart';
 import 'package:flutter_project_new_mac/widgets/game_template.dart';
 import 'package:flutter_project_new_mac/widgets/multi_select_choice_chip.dart';
 import 'package:flutter_project_new_mac/widgets/suggestion_button.dart';
@@ -44,8 +45,9 @@ class _MyHomePageState extends State<MyHomePage> {
     const Games(),
     const Rules(),
     const Timer(),
+    const EmailSender()
   ];
-  final List<String> _screenNames = ['Suggestions', 'Games', 'Rules', 'Timer'];
+  final List<String> _screenNames = ['Suggestions', 'Games', 'Rules', 'Timer', 'Feedback'];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -112,7 +114,7 @@ class Suggestions extends StatelessWidget {
               SuggestionButton(getter: Objects.getObjects(), type: 'object'),
               SuggestionButton(
                   getter: Problem.getProblems(),
-                  type: 'problem they\'re trying to solve or deal with'),
+                  type: 'problem they\'re trying to solve'),
               SuggestionButton(
                   getter: UnusualEvent.getUnusualEvents(),
                   type: 'unusual event'),
@@ -189,7 +191,7 @@ class _GamesState extends State<Games> {
           ///TODO: have put a mic icon on buttons that require an emcee, a circle or line for circle/line games, 2/3/4 dots for 2/3/4 people?
           ///mic_rounded, mic_sharp mic_off -- remove (line) -- radio_button_off (circle) -- person
           const Text(
-            'Short Form & Warm Up Games',
+            'Warm Up & Short Form Games',
             style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w700),
           ),
           Expanded(
