@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 
-
 class EmailSender extends StatefulWidget {
   const EmailSender({Key? key}) : super(key: key);
 
@@ -63,34 +62,30 @@ class _EmailSenderState extends State<EmailSender> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.yellow,
-        title: const Wrap(
-          children: [
-            Text(
-              'Please send any bug, ',
-              style: TextStyle(fontSize: 16, color: Colors.black),
-            ),
-            Text(
-              'issue, or improvement',
-              style: TextStyle(fontSize: 16, color: Colors.black),
+        appBar: AppBar(
+          backgroundColor: Colors.yellow,
+          title: const Wrap(
+            children: [
+              Text(
+                'Please send any bug, ',
+                style: TextStyle(fontSize: 16, color: Colors.black),
+              ),
+              Text(
+                'issue, or improvement',
+                style: TextStyle(fontSize: 16, color: Colors.black),
+              )
+            ],
+          ),
+          actions: <Widget>[
+            IconButton(
+              onPressed: send,
+              icon: const Icon(
+                Icons.send,
+                color: Colors.black,
+              ),
             )
           ],
         ),
-        actions: <Widget>[
-          IconButton(
-            onPressed: send,
-            icon: const Icon(
-              Icons.send,
-              color: Colors.black,
-            ),
-          )
-        ],
-      ),
-      body: Container()
-    );
+        body: Container());
   }
-
-
 }
-

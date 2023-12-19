@@ -1,23 +1,19 @@
-
-
 import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_project_new_mac/types/suggestions/how_they_know_each_other.dart';
+import 'package:flutter_project_new_mac/types/suggestions/object.dart';
+import 'package:flutter_project_new_mac/types/suggestions/one_word.dart';
+import 'package:flutter_project_new_mac/types/suggestions/place.dart';
+import 'package:flutter_project_new_mac/types/suggestions/problem_to_solve.dart';
+import 'package:flutter_project_new_mac/types/suggestions/unusual_event.dart';
 
-import '../types/suggestions/object.dart';
-import '../types/suggestions/one_word.dart';
-import '../types/suggestions/place.dart';
-import '../types/suggestions/problem_to_solve.dart';
-import '../types/suggestions/unusual_event.dart';
-
-
-String getOneWord(){
+String getOneWord() {
   var result = [];
   result = Word.getWords();
 
-final random = Random();
-var i = random.nextInt(result.length);
+  final random = Random();
+  var i = random.nextInt(result.length);
   debugPrint(result[i]);
   return result[i];
 }
@@ -30,7 +26,7 @@ String getObject() {
   return result[i];
 }
 
-String getHowTheyKnowEachOther(){
+String getHowTheyKnowEachOther() {
   var result = [];
   result = HowTheyKnowEachOther.getHowTheyKnowEachOther();
   final random = Random();
@@ -38,7 +34,7 @@ String getHowTheyKnowEachOther(){
   return result[i];
 }
 
-String getPlace(){
+String getPlace() {
   var result = [];
   result = Place.getPlaces();
   final random = Random();
@@ -46,7 +42,7 @@ String getPlace(){
   return result[i];
 }
 
-String getProblemToSolve(){
+String getProblemToSolve() {
   var result = [];
   result = Problem.getProblems();
   final random = Random();
@@ -54,7 +50,7 @@ String getProblemToSolve(){
   return result[i];
 }
 
-String getUnusualEvent(){
+String getUnusualEvent() {
   var result = [];
   result = UnusualEvent.getUnusualEvents();
   final random = Random();

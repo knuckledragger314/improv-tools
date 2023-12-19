@@ -16,10 +16,6 @@ class _StopwatchTimerState extends State<StopwatchTimer> {
   bool isRunning = false;
   String time = '00:00';
 
-  // final deepPurple50 = Color(0xFFF3E5F5);
-  //  Color(0xFFE1BEE7),
-  //  Color(0xFFCE93D8),
-
   void startTimer() {
     const oneSec = Duration(seconds: 1);
     _timerUp = Timer.periodic(oneSec, (Timer t) {

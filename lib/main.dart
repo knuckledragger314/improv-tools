@@ -47,7 +47,13 @@ class _MyHomePageState extends State<MyHomePage> {
     const Timer(),
     const EmailSender()
   ];
-  final List<String> _screenNames = ['Suggestions', 'Games', 'Rules', 'Timer', 'Feedback'];
+  final List<String> _screenNames = [
+    'Suggestions',
+    'Games',
+    'Rules',
+    'Timer',
+    'Feedback'
+  ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -60,7 +66,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Improv Tools', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),),
+          title: const Text(
+            'Improv Tools',
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
+          ),
           backgroundColor: Colors.deepPurple,
           iconTheme: const IconThemeData(color: Colors.white),
         ),
