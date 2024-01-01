@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_project_new_mac/types/suggestions/how_they_know_each_other.dart';
 import 'package:flutter_project_new_mac/types/suggestions/object.dart';
 import 'package:flutter_project_new_mac/types/suggestions/one_word.dart';
@@ -14,7 +13,6 @@ String getOneWord() {
 
   final random = Random();
   var i = random.nextInt(result.length);
-  debugPrint(result[i]);
   return result[i];
 }
 

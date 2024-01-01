@@ -24,7 +24,6 @@ class _CountdownTimerState extends State<CountdownTimer> {
       oneSec,
       (Timer timer) => setState(
         () {
-          debugPrint('count down - $_timer');
           if (_start < 1) {
             _timer.cancel();
           } else {

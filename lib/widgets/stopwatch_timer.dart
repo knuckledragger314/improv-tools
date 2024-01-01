@@ -23,7 +23,6 @@ class _StopwatchTimerState extends State<StopwatchTimer> {
         time =
             '${_stopwatchUp.elapsed.inMinutes.toString().padLeft(2, '0')}:${(_stopwatchUp.elapsed.inSeconds % 60).toString().padLeft(2, '0')}';
         isRunning = true;
-        debugPrint('time $time');
       });
     });
     _stopwatchUp.start();
