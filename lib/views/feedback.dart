@@ -3,14 +3,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 
-class EmailSender extends StatefulWidget {
-  const EmailSender({Key? key}) : super(key: key);
+class Feedback extends StatefulWidget {
+  const Feedback({Key? key}) : super(key: key);
 
   @override
-  State<EmailSender> createState() => _EmailSenderState();
+  State<Feedback> createState() => _FeedbackState();
 }
 
-class _EmailSenderState extends State<EmailSender> {
+class _FeedbackState extends State<Feedback> {
   List<String> attachments = [];
   bool isHTML = false;
 

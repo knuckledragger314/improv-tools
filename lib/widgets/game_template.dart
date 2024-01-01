@@ -17,7 +17,7 @@ class GameDescription extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(title, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700),),
         backgroundColor: Colors.deepPurple,
       ),
       body: Column(
@@ -45,11 +45,14 @@ class GameDescription extends StatelessWidget {
                         );
                       },
                     ),
-                    Text(body,
-                        style: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400))
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(body,
+                          style: const TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400)),
+                    )
                   ],
                 ),
               ),
