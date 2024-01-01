@@ -149,7 +149,7 @@ abstract class AllGames {
               'For another example, let\'s say the first scene is about two strawberry pickers. The next time that scene is revisited, they could be working in a auto parts store together. Then in the last scene, they are bosses of a strawberry corporation.\n \n'
               'In one last example, let\'s say two people are co-workers at a normal desk job. In the second scene, one of them has gotten promoted and is the boss of the second person. In the third scene, both people have gotten fired for spending too much time pranking one another instead of working.\n \n'
               'The main thing is that when you revisit a scene, the players should not just continue where the last scene left off. It should jump forward in time, escalate or heighten the game, or change location with the same basic circumstances as before.\n \n'
-              'This is also a very rare game in improv where you have time, as a player, to plan your next scene. That is totally in this game, since you have time to plan your next move while you are in the back and not in the scene.'),
+              'This is also a very rare game in improv where you have time, as a player, to plan your next scene. Planning your next scene is totally fair and encouraged in this game, since you have time to plan your next move while you are in the back and not in the scene.'),
       const GameDescription(
           title: 'freeze tag',
           headers: ['Line Game', 'High Energy Game', 'No Emcee Needed'],
