@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project_new_mac/ad_helper.dart';
 import 'package:flutter_project_new_mac/types/games/game_filters.dart';
 import 'package:flutter_project_new_mac/types/games/games.dart';
-import 'package:flutter_project_new_mac/widgets/game_template.dart';
+import 'package:flutter_project_new_mac/widgets/game_description.dart';
 import 'package:flutter_project_new_mac/widgets/multi_select_choice_chip.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
