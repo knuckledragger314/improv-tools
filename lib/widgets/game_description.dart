@@ -19,6 +19,7 @@ class GameDescription extends StatelessWidget {
       appBar: AppBar(
         title: Text(title, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700),),
         backgroundColor: Colors.deepPurple,
+        foregroundColor: Colors.white,
       ),
       body: Column(
         children: [

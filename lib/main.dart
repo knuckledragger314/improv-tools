@@ -1,13 +1,19 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_project_new_mac/views/games.dart';
 import 'package:flutter_project_new_mac/views/rules.dart';
 import 'package:flutter_project_new_mac/views/suggestions.dart';
-import 'package:flutter_project_new_mac/views/timer.dart';
+import 'package:flutter_project_new_mac/views/timer.dart' as t;
 import 'package:flutter_project_new_mac/views/feedback.dart' as f;
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 
-void main() => runApp(const MyApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -19,31 +25,34 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: const ImprovToolsHome(),
     );
   }
 }
 
-///TODO: Add banner ad to top of games, rules, timer, suggestions. Need new ad for each. Name them in ad unit creation
-///_ios_games_top, etc
 ///TODO: proof read and format (bold), etc, all the games!!!
 ///TODO: use AI to generate more words, unusual events, "how they know each other", etc.
-///TODO: Initiate splash screen to allow ads to load
+///TODO: currently trying to call MobileAds.instance.initialize() at main(),
+///still need to remove from futureBuilder below and test
+///TODO: Consider building a brand new app from scratch called improv tools not new app new mac or whatever dumb shit you called it
+///or google how easy you can change the name
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class ImprovToolsHome extends StatefulWidget {
+  const ImprovToolsHome({Key? key}) : super(key: key);
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<ImprovToolsHome> createState() => _ImprovToolsHomeState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _ImprovToolsHomeState extends State<ImprovToolsHome> {
   int selectedIndex = 0;
+  bool splash = true;
+  late final Timer timer = Timer(const Duration(milliseconds: 1), () {});
   final List<Widget> _screens = [
     const Suggestions(),
     const Games(),
     const Rules(),
-    const Timer(),
+    const t.Timer(),
     const f.Feedback()
   ];
   final List<String> _screenNames = [
@@ -57,6 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void _onItemTapped(int index) {
     setState(() {
       selectedIndex = index;
+      splash = false;
     });
     Navigator.pop(context); // close the drawer }
   }
@@ -85,24 +95,28 @@ class _MyHomePageState extends State<MyHomePage> {
           },
         ),
       ),
-      body: FutureBuilder<void>(
-        future: _initGoogleMobileAds(),
-        builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
-          return Builder(
-            builder: (context) => InkWell(
-              onTap: () {
-                Scaffold.of(context).openDrawer();
-              },
-              child: _screens[selectedIndex],
-            ),
-          );
-        },
+      // body: FutureBuilder<void>(
+      //   future: _initGoogleMobileAds(),
+      //   builder: (BuildContext context, AsyncSnapshot<void> snapshot) {
+      //     return Builder(
+      //       builder: (context) => InkWell(
+      //         onTap: () {
+      //           Scaffold.of(context).openDrawer();
+      //         },
+      //         child: _screens[selectedIndex],
+      //       ),
+      //     );
+      //   },
+      // ),
+      body: Builder(
+        builder: (context) => InkWell(
+          onTap: () {
+            Scaffold.of(context).openDrawer();
+          },
+          child: _screens[selectedIndex],
+        ),
       ),
     );
-  }
-
-  Future<InitializationStatus> _initGoogleMobileAds() {
-    return MobileAds.instance.initialize();
   }
 }
 
