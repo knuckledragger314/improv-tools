@@ -84,15 +84,18 @@ class _SuggestionsState extends State<Suggestions> {
               ),
             ],
           ),
-          (_bannerAdSuggestionBottom != null) ?
-          Align(
-            alignment: Alignment.topCenter,
-            child: SizedBox(
-              width: _bannerAdSuggestionBottom!.size.width.toDouble(),
-              height: _bannerAdSuggestionBottom!.size.height.toDouble(),
-              child: AdWidget(ad: _bannerAdSuggestionBottom!),
-            ),
-          ) : const SizedBox(height: 50,),
+          (_bannerAdSuggestionBottom != null)
+              ? Align(
+                  alignment: Alignment.topCenter,
+                  child: SizedBox(
+                    width: _bannerAdSuggestionBottom!.size.width.toDouble(),
+                    height: _bannerAdSuggestionBottom!.size.height.toDouble(),
+                    child: AdWidget(ad: _bannerAdSuggestionBottom!),
+                  ),
+                )
+              : const SizedBox(
+                  height: 50,
+                ),
         ],
       ),
     );

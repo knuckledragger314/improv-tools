@@ -17,7 +17,6 @@ class _RulesState extends State<Rules> {
   @override
   void initState() {
     super.initState();
-    // COMPLETE: Load a banner ad
     BannerAd(
       adUnitId: AdHelper.bannerAdUnitIdRulesTop,
       request: const AdRequest(),
