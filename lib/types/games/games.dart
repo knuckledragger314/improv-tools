@@ -82,14 +82,14 @@ abstract class AllGames {
           text:
               'This is a timed, emcee game. A strong emcee familiar with the game is needed in order for this game to go as well as possible. All players stand in a line across the stage. The emcee will get an unpopular opinion (politically correct, please) from the audience. Then the emcee will ask the players if any of them have a strong opinion about that unpopular opinion - they can agree or disagree. \n \n'
               'After hearing from all the players who have raised their hand, the emcee will decide who they want to hear from first. That player, Player A, will then go to the center of the stage, a few steps in front of the line players. It should look like one lead singer up front and a choir of backup singers behind them. Then Player A will begin speaking on the topic. \n \n'
-              'At anytime, any of the players behind them can raise their hand and say, "CHALLENGE". Then, once the emcee calls on them - <i>and ONLY after the emcee has called on them<i> - that player can then pitch why they are challenging Player A. After the emcee has heard all the challenges at that moment, the emcee can decide who he wants to hear from next. Or, the emcee may not like any of the challenges and will let Player A continue talking. Basically, the point of this game is be creative, argue a bunch, and sell your argument to the emcee. This part of the game is not super important. It just kicks off the game.  \n \n'
+              'At anytime, any of the players behind them can raise their hand and say, "CHALLENGE". Then, once the emcee calls on them - <i>and ONLY after the emcee has called on them</i> - that player can then pitch why they are challenging Player A. After the emcee has heard all the challenges at that moment, the emcee can decide who he wants to hear from next. Or, the emcee may not like any of the challenges and will let Player A continue talking. Basically, the point of this game is be creative, argue a bunch, and sell your argument to the emcee. This part of the game is not super important. It just kicks off the game.  \n \n'
               'Here is an example of how this could go:\n \n'
               'Unpopular opinion - broccoli is tasty. \n \n'
               '<b>Emcee:</b> Which of the players have strong feelings about this?\n \n'
               '<b>Player A</b> (<i>after being called on</i>):</b> Broccoli is not tasty. My parents made me eat broccoli as a kid and it was over-steamed and soft and gross.\n \n'
               '<b>Player B</b> (<i>after being called on</i>):</b> Broccoli is delicious! I love roasted broccoli tossed in olive oil, salt and pepper!\n \n'
               '<b>Emcee:</b> OK, I want to hear more about Player A and their gross broccoli they had to eat as a kid. Come on up Player A.\n \n'
-              '<i>Player A steps up to the front of the stage.<i>\n \n'
+              '<i>Player A steps up to the front of the stage.</i>\n \n'
               '<b>Player A:</b> I still have nightmares about the broccoli my parents made me eat. I love my parents, but they are the worst cooks. My parents made me eat over-steamed, unseasoned, limp, gross broccoli all the time and I hated it! I swear, that brocc-\n \n'
               '<b>Player B:</b> Challenge!\n \n'
               '<b>Player C:</b> Challenge!\n \n'
@@ -128,7 +128,7 @@ abstract class AllGames {
                 'Then, the player immediately to their left does their best to <b>act out the exact same movements, speech, tone, posture, inflection, syntax, etc. as the person who just acted out the line</b>. \n \n '
                 'Each player tries their best to mimic the player\'s action immediately before them - <b>not the person who started the character cascade</b>. <b>The point is, inevitably, by the time it gets around back to the beginning, the character is quite different than how it started.</b> The movements will be different, even the sounds or dialogue may have changed. The character should go back around to the person who started it. That means for a given character, the same person starts and finishes the cascade. Then, the next player starts a new character.\n \n'
                 '<b>Here are a few other notes:</b>\n'
-                '\u2022 This is a great warmup game before a show or at the beginning of a class \n \n'
+                '\u2022 This is a great warmup game before a show or at the beginning of a class \n'
                 '\u2022 Most people insist on NOT mimicking the player before them, but instead insist on making the character more dramatic, or whatever. It can be a little much. But just go with it. You\'re hanging out with theater people. What do you expect? \n \n',
             tags: {
               'b': StyledTextTag(
@@ -222,7 +222,7 @@ abstract class AllGames {
               '<b>The panelists should be sure to stay in character and talk about these topics like their character would.</b> For example, SpongeBob SquarePants would probably relate any topic to how it would work under the sea. A toaster would relate any topic to whether it can be toasted, or toasting the topic would improve it. \n \n'
               'Have fun. Be goofy. Don\'t be afraid to move around the room or be distracting. It is up to the host to keep the show under control and the panelists on topic! It is up to the panelists to make the show as goofy and not on topic as possible! \n \n'
               '<b>Here are a few other notes:</b> \n'
-              '\u2022 If the improviser is suggested a celebrity they have never heard of, the improviser should just do their best to pick a character it makes them think of, and go for it! Just like a good improviser does!\n \n'
+              '\u2022 If the improviser is suggested a celebrity they have never heard of, the improviser should just do their best to pick a character it makes them think of, and go for it! Just like a good improviser does!\n'
               '\u2022 The same advice applies to a topic you have no idea about! If you are stuck discussing a topic you have no clue about, just decide what your strong feelings on it and go with it! Improvise!\n \n',
           tags: {
             'b': StyledTextTag(
@@ -256,7 +256,7 @@ abstract class AllGames {
               '<b>Group:</b> Five! Five Things!\n \n'
               'Then Janice picks another player and asks them to name five things.\n \n'
               '<b>Here are a few other notes:</b>\n'
-              '\u2022 People in the circle can take turns by going in order around the circle, or they can randomly pick one another. Either way, be sure everyone gets a turn!\n \n'
+              '\u2022 People in the circle can take turns by going in order around the circle, or they can randomly pick one another. Either way, be sure everyone gets a turn!\n'
               '\u2022 The most important thing to remember is the person naming the things should do so <b>confidently</b>. Also, it is more fun if you are able to get creative and goofy. If you\'re asked to name five types of wood, you don\'t have to just say pine, oak, maple, cherry, and pressure treated.You can say amazing wood, that wood they make baseball bats out of, orange wood, or soundproof wood! Even if you have no idea what any types of wood are, just make it up and say it confidently, like you know in your heart that this type of wood exists, and it deserves to be named! \n \n',
           tags: {
             'b': StyledTextTag(
@@ -398,8 +398,8 @@ abstract class AllGames {
               'The game ends when <b>both players in the circle say the exact same word!</b>\n \n'
               'Some rounds will go shockingly quick. Others will drag on until just moments before the end of time. Three rounds is usually a nice round number for this game. \n \n'
               '<b>Here are a few other notes:</b> \n'
-              '\u2022 <b>The same word should not be repeated twice in the same round.</b> This is a slightly serious offense. If all the players are paying attention, none of them would repeat the same word. A variation of the same word can be said, but it is best if even that is avoided. If someone says a word that was already said, two new players should say "got it" based on the <i>previously said words</i>. That is part of the challenge of this game. \n \n'
-              '\u2022 Even if you are a player who just said a word, you can say "got it" right after. However, be mindful of other players. Step up, step back! Give others a chance to get into the circle.\n \n'
+              '\u2022 <b>The same word should not be repeated twice in the same round.</b> This is a slightly serious offense. If all the players are paying attention, none of them would repeat the same word. A variation of the same word can be said, but it is best if even that is avoided. If someone says a word that was already said, two new players should say "got it" based on the <i>previously said words</i>. That is part of the challenge of this game. \n'
+              '\u2022 Even if you are a player who just said a word, you can say "got it" right after. However, be mindful of other players. Step up, step back! Give others a chance to get into the circle.\n'
               '\u2022 It is supposed to be "one" word you think of, but there is some flexibility here. For example, consider New Mexico, Milky Way, George Washington, etc. These are all acceptable words to say in this game.\n \n',
           tags: {
             'b': StyledTextTag(
@@ -546,7 +546,7 @@ abstract class AllGames {
                 'After just three lines, we know in this scene we have a husband and wife who are tending to their crop of turnips on their family farm, and they want to give their kids a good Christmas. \n \n'
                 'Are are a few more notes: \n'
                 '\u2022 <b>Don\'t ask questions!</b> You only have 3 lines - don\'t waste one asking questions. You should help your scene partner quickly establish the scene! \n'
-                '\u2022 Even if you have no idea what action your scene partner is doing, do your best to mirror the action, or do a complimentary action. '
+                '\u2022 Even if you have no idea what action your scene partner is doing, do your best to mirror the action, or do a complimentary action. \n'
                 '\u2022 Try to make the dialogue natural. Don\'t try to cram everything into one line! For example, if Right Player would have come out and said "Sally, my wife, I sure hope our turnips have a good harvest so we can buy a Playstation X for our kids, and one for us!" - that would have been unnatural, and too much! If not all three pieces of the scene are established after three lines, that\'s OK! It\'s just an exercise. \n \n',
             tags: {
               'b': StyledTextTag(
@@ -570,13 +570,13 @@ abstract class AllGames {
               'The ball is passed around the circle, from one player to the next. The ball of energy must travel in the same direction it was started - it must always be passed to the person next to the person with the ball of energy. And they must say WHOOSH when they pass it.\n \n'
               'That is the start of the game, and then other fun rules can then be applied to make the game more interesting and fun.\n \n'
               'Here are the next basic rules to apply after you have the first one down:'
-              '\u2022 When the ball of energy is passed to you, put up your hands up - with your palms facing the person who is passing you the ball - and say WHOA! This will force the ball to go back to the previous player and send the ball back the way it came\n \n'
-              '\u2022 Hold up your hand over the next person\'s head and say "ramp", which will then skip the next person, but keep the ball going in its same direction of travel\n \n'
+              '\u2022 When the ball of energy is passed to you, put up your hands up - with your palms facing the person who is passing you the ball - and say WHOA! This will force the ball to go back to the previous player and send the ball back the way it came\n'
+              '\u2022 Hold up your hand over the next person\'s head and say "ramp", which will then skip the next person, but keep the ball going in its same direction of travel\n'
               'Now, you can add on even MORE rules to make the game more fun. All these choices can be made <i>only by the person who has the ball of energy.</i>\n \n'
-              '\u2022 Say "300" and then everyone in the circle yells THIS IS SPARTA and gives and kicks the air in front of them. The player who called 300 will then pass the ball in the same direction it was traveling\n \n'
-              '\u2022 Say "Rainbow &lt;person in the circle&gt;". Everyone will then look at that person with glowing appreciation and clap for them. The named person shall smile and bask in their temporary glory. The person who called "Rainbow" will then pass the ball in the same direction it was traveling\n \n'
-              '\u2022 Say "Bunny &lt;person in the circle&gt;". The person called will then hold their fingers up by their mouth and wiggle them like whiskers. The players to the left and the right of the player called will each use their fingers to put "bunny ears" on them. All three players will say "bunny bunny bunny bunny bunny bunny" for a few beats. The person who called "Bunny" will then pass the ball in the same direction it was traveling\n \n'
-              '\u2022 You can make up even more rules that can be used!',
+              '\u2022 Say "300" and then everyone in the circle yells THIS IS SPARTA and gives and kicks the air in front of them. The player who called 300 will then pass the ball in the same direction it was traveling\n'
+              '\u2022 Say "Rainbow &lt;person in the circle&gt;". Everyone will then look at that person with glowing appreciation and clap for them. The named person shall smile and bask in their temporary glory. The person who called "Rainbow" will then pass the ball in the same direction it was traveling\n'
+              '\u2022 Say "Bunny &lt;person in the circle&gt;". The person called will then hold their fingers up by their mouth and wiggle them like whiskers. The players to the left and the right of the player called will each use their fingers to put "bunny ears" on them. All three players will say "bunny bunny bunny bunny bunny bunny" for a few beats. The person who called "Bunny" will then pass the ball in the same direction it was traveling\n'
+              '\u2022 You can make up even more rules that can be used! \n \n',
           tags: {
             'b': StyledTextTag(
                 style: const TextStyle(fontWeight: FontWeight.bold)),
@@ -599,7 +599,7 @@ abstract class AllGames {
               'If anyone messes up and says "zip" when they should have sad "zop", the game momentarily ends and everyone should clap and celebrate the mistake. \n \n'
               '<b>This game is all about making eye contact with your partner and listening.</b> \n \n'
               '<b>Here are a few other notes: </b> \n'
-              '\u2022 If someone sends you a zip, you can send them a zap right back. You are not required to send the zap to a different person than who sent you the zip. \n \n'
+              '\u2022 If someone sends you a zip, you can send them a zap right back. You are not required to send the zap to a different person than who sent you the zip. \n'
               '\u2022 For added complexity, add a "beep" and a "bop" to this game. One person starts a "beep" and looks at the person to their left. That person can either look at the person to their left and say "beep", or look back to the person to their right and say "bop". "Beep" to the left, "bop" to the right. This beep and bop should go around the circle while zip, zap and zop are being sent across the circle. \n \n',
           tags: {
             'b': StyledTextTag(
