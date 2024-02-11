@@ -22,7 +22,6 @@ class _GamesState extends State<Games> {
   @override
   void initState() {
     super.initState();
-    // COMPLETE: Load a banner ad
     BannerAd(
       adUnitId: AdHelper.bannerAdUnitIdGamesTop,
       request: const AdRequest(),
@@ -53,15 +52,18 @@ class _GamesState extends State<Games> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          (_bannerAdGamesTop != null) ?
-          Align(
-            alignment: Alignment.topCenter,
-            child: SizedBox(
-              width: _bannerAdGamesTop!.size.width.toDouble(),
-              height: _bannerAdGamesTop!.size.height.toDouble(),
-              child: AdWidget(ad: _bannerAdGamesTop!),
-            ),
-          ) : const SizedBox(height: 50,),
+          (_bannerAdGamesTop != null)
+              ? Align(
+                  alignment: Alignment.topCenter,
+                  child: SizedBox(
+                    width: _bannerAdGamesTop!.size.width.toDouble(),
+                    height: _bannerAdGamesTop!.size.height.toDouble(),
+                    child: AdWidget(ad: _bannerAdGamesTop!),
+                  ),
+                )
+              : const SizedBox(
+                  height: 50,
+                ),
           Padding(
             padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
             child: ElevatedButton(

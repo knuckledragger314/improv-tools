@@ -8,7 +8,6 @@ import 'package:flutter_project_new_mac/views/timer.dart' as t;
 import 'package:flutter_project_new_mac/views/feedback.dart' as f;
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   MobileAds.instance.initialize();
@@ -119,7 +118,3 @@ class _ImprovToolsHomeState extends State<ImprovToolsHome> {
     );
   }
 }
-
-
-
-

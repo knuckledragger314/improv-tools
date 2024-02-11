@@ -96,9 +96,13 @@ class _StopwatchTimerState extends State<StopwatchTimer> {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700)),
           ),
         ),
+
         // Reset button
         Visibility(
           visible: !isRunning && time != '00:00',
+          maintainSize: true,
+          maintainAnimation: true,
+          maintainState: true,
           child: ElevatedButton.icon(
             icon: const Icon(Icons.refresh),
             onPressed: reset,

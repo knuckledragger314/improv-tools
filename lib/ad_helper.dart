@@ -1,7 +1,6 @@
 import 'dart:io';
 
 class AdHelper {
-
   static String get bannerAdUnitIdGamesTop {
     if (Platform.isAndroid) {
       //real mob ad id
@@ -29,7 +28,6 @@ class AdHelper {
       //return 'ca-app-pub-5192244287661345/1334035459';
       //test ad below
       return 'ca-app-pub-3940256099942544/2934735716';
-
     } else {
       throw UnsupportedError('Unsupported platform');
     }
@@ -62,29 +60,28 @@ class AdHelper {
       //return 'ca-app-pub-5192244287661345/3716149037';
       //test ad below
       return 'ca-app-pub-3940256099942544/2934735716';
-
     } else {
       throw UnsupportedError('Unsupported platform');
     }
   }
 
-  // static String get interstitialAdUnitId {
-  //   if (Platform.isAndroid) {
-  //     return '<YOUR_ANDROID_INTERSTITIAL_AD_UNIT_ID>';
-  //   } else if (Platform.isIOS) {
-  //     return '<YOUR_IOS_INTERSTITIAL_AD_UNIT_ID>';
-  //   } else {
-  //     throw UnsupportedError('Unsupported platform');
-  //   }
-  // }
+// static String get interstitialAdUnitId {
+//   if (Platform.isAndroid) {
+//     return '<YOUR_ANDROID_INTERSTITIAL_AD_UNIT_ID>';
+//   } else if (Platform.isIOS) {
+//     return '<YOUR_IOS_INTERSTITIAL_AD_UNIT_ID>';
+//   } else {
+//     throw UnsupportedError('Unsupported platform');
+//   }
+// }
 
-  // static String get rewardedAdUnitId {
-  //   if (Platform.isAndroid) {
-  //     return '<YOUR_ANDROID_REWARDED_AD_UNIT_ID>';
-  //   } else if (Platform.isIOS) {
-  //     return '<YOUR_IOS_REWARDED_AD_UNIT_ID>';
-  //   } else {
-  //     throw UnsupportedError('Unsupported platform');
-  //   }
-  // }
+// static String get rewardedAdUnitId {
+//   if (Platform.isAndroid) {
+//     return '<YOUR_ANDROID_REWARDED_AD_UNIT_ID>';
+//   } else if (Platform.isIOS) {
+//     return '<YOUR_IOS_REWARDED_AD_UNIT_ID>';
+//   } else {
+//     throw UnsupportedError('Unsupported platform');
+//   }
+// }
 }

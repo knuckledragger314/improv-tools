@@ -17,7 +17,6 @@ class _TimerState extends State<Timer> {
   @override
   void initState() {
     super.initState();
-    // COMPLETE: Load a banner ad
     BannerAd(
       adUnitId: AdHelper.bannerAdUnitIdTimerBottom,
       request: const AdRequest(),
@@ -46,27 +45,30 @@ class _TimerState extends State<Timer> {
   Widget build(BuildContext context) {
     return Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Container(),
+        const Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(),
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                StopwatchTimer(),
-                SizedBox(height: 48),
-                CountdownTimer(),
-              ],
-            ),
-            (_bannerAdTimerBottom != null) ?
-            Align(
-              alignment: Alignment.topCenter,
-              child: SizedBox(
-                width: _bannerAdTimerBottom!.size.width.toDouble(),
-                height: _bannerAdTimerBottom!.size.height.toDouble(),
-                child: AdWidget(ad: _bannerAdTimerBottom!),
-              ),
-            ) : const SizedBox(height: 50,),
+            StopwatchTimer(),
+            SizedBox(height: 48),
+            CountdownTimer(),
           ],
-        ));
+        ),
+        (_bannerAdTimerBottom != null)
+            ? Align(
+                alignment: Alignment.topCenter,
+                child: SizedBox(
+                  width: _bannerAdTimerBottom!.size.width.toDouble(),
+                  height: _bannerAdTimerBottom!.size.height.toDouble(),
+                  child: AdWidget(ad: _bannerAdTimerBottom!),
+                ),
+              )
+            : const SizedBox(
+                height: 50,
+              ),
+      ],
+    ));
   }
 }
