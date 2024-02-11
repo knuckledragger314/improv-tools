@@ -127,7 +127,7 @@ abstract class AllGames {
                 'For example, maybe they will shape their face so it is full of anguish,  clasp their hands together and beg aloud, "Please, please. I promise I\'ll pay you next week" \n \n'
                 'Then, the player immediately to their left does their best to <b>act out the exact same movements, speech, tone, posture, inflection, syntax, etc. as the person who just acted out the line</b>. \n \n '
                 'Each player tries their best to mimic the player\'s action immediately before them - <b>not the person who started the character cascade</b>. <b>The point is, inevitably, by the time it gets around back to the beginning, the character is quite different than how it started.</b> The movements will be different, even the sounds or dialogue may have changed. The character should go back around to the person who started it. That means for a given character, the same person starts and finishes the cascade. Then, the next player starts a new character.\n \n'
-                'Here are a few other notes:\n \n'
+                '<b>Here are a few other notes:</b>\n'
                 '\u2022 This is a great warmup game before a show or at the beginning of a class \n \n'
                 '\u2022 Most people insist on NOT mimicking the player before them, but instead insist on making the character more dramatic, or whatever. It can be a little much. But just go with it. You\'re hanging out with theater people. What do you expect? \n \n',
             tags: {
@@ -190,7 +190,7 @@ abstract class AllGames {
               'And on and on.\n \n'
               'When the scene is ready to end, the emcee should say some key phrase that lets the interviewee know it is their time to get off the stage. Some common examples are "left the stove on", or "gotta pee".\n \n'
               'If more than two actors are involved, this is when the next actor would come on stage to be interviewed.\n \n'
-              'Here are a few other notes:\n \n'
+              '<b>Here are a few other notes:</b>\n'
               'The interviewees need to go big with their emotions. If the emotion is "sad", the interviewee should be falling out of their chair, crying on the ground. If the emotion is "scared", the interviewee should get up, and back up against the imaginary wall of the office. The humor of this game is in the emotional physicality.',
           tags: {
             'b': StyledTextTag(
@@ -221,7 +221,7 @@ abstract class AllGames {
               '<b>Now the game can begin.</b> The host begins by introducing their television show, and introducing the topics they will be interviewing their guests about. Then, the interviewer should ask their guests to talk about their thoughts on one of the topics.\n \n'
               '<b>The panelists should be sure to stay in character and talk about these topics like their character would.</b> For example, SpongeBob SquarePants would probably relate any topic to how it would work under the sea. A toaster would relate any topic to whether it can be toasted, or toasting the topic would improve it. \n \n'
               'Have fun. Be goofy. Don\'t be afraid to move around the room or be distracting. It is up to the host to keep the show under control and the panelists on topic! It is up to the panelists to make the show as goofy and not on topic as possible! \n \n'
-              'Here are a few other notes: \n'
+              '<b>Here are a few other notes:</b> \n'
               '\u2022 If the improviser is suggested a celebrity they have never heard of, the improviser should just do their best to pick a character it makes them think of, and go for it! Just like a good improviser does!\n \n'
               '\u2022 The same advice applies to a topic you have no idea about! If you are stuck discussing a topic you have no clue about, just decide what your strong feelings on it and go with it! Improvise!\n \n',
           tags: {
@@ -255,7 +255,7 @@ abstract class AllGames {
               '<b>Janice:</b> Hot air balloon spaceships!\n \n'
               '<b>Group:</b> Five! Five Things!\n \n'
               'Then Janice picks another player and asks them to name five things.\n \n'
-              'Here are a few other notes:\n'
+              '<b>Here are a few other notes:</b>\n'
               '\u2022 People in the circle can take turns by going in order around the circle, or they can randomly pick one another. Either way, be sure everyone gets a turn!\n \n'
               '\u2022 The most important thing to remember is the person naming the things should do so <b>confidently</b>. Also, it is more fun if you are able to get creative and goofy. If you\'re asked to name five types of wood, you don\'t have to just say pine, oak, maple, cherry, and pressure treated.You can say amazing wood, that wood they make baseball bats out of, orange wood, or soundproof wood! Even if you have no idea what any types of wood are, just make it up and say it confidently, like you know in your heart that this type of wood exists, and it deserves to be named! \n \n',
           tags: {
@@ -397,7 +397,7 @@ abstract class AllGames {
               '<b>Now, everyone in the circle should think about what one word CONNECTS those two words.</b> When a word comes to mind, say "got it" and do the exact same thing. The first two players who say "got it" should step into the circle and look at each other. The rest of the circle counts down, "3, 2, 1" and both those players say what word they are thinking of simultaneously.\n \n'
               'The game ends when <b>both players in the circle say the exact same word!</b>\n \n'
               'Some rounds will go shockingly quick. Others will drag on until just moments before the end of time. Three rounds is usually a nice round number for this game. \n \n'
-              '<b>Here are some notes:</b> \n'
+              '<b>Here are a few other notes:</b> \n'
               '\u2022 <b>The same word should not be repeated twice in the same round.</b> This is a slightly serious offense. If all the players are paying attention, none of them would repeat the same word. A variation of the same word can be said, but it is best if even that is avoided. If someone says a word that was already said, two new players should say "got it" based on the <i>previously said words</i>. That is part of the challenge of this game. \n \n'
               '\u2022 Even if you are a player who just said a word, you can say "got it" right after. However, be mindful of other players. Step up, step back! Give others a chance to get into the circle.\n \n'
               '\u2022 It is supposed to be "one" word you think of, but there is some flexibility here. For example, consider New Mexico, Milky Way, George Washington, etc. These are all acceptable words to say in this game.\n \n',
@@ -465,7 +465,7 @@ abstract class AllGames {
               '<b>One Voice:</b> I have been studying salamanders for over 10 years. \n \n'
               '<b>Host:</b> Tell us a little more about your background with salamanders. \n \n'
               'And on and on. \n \n'
-              'Here are some notes: \n \n'
+              '<b>Here are a few other notes:</b>\n'
               '\u2022 This game is very goofy and difficult, but that is what makes it fun \n'
               '\u2022 Inevitably, one person will "lead" the conversation while the other one tries to keep up and say the same words. Ideally the "leader" of the dialogue will alternate between answers, or maybe even between sentences! \n'
               '\u2022 It will take a lot of practice to get good at this game. It is helpful to talk slowly and enunciate clearly. This will help your partner know where you are taking the dialogue. \n',
