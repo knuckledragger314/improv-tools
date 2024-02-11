@@ -43,32 +43,47 @@ class _TimerState extends State<Timer> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 100.0,
+          title: Column(
+        children: [
+          (_bannerAdTimerBottom != null)
+              ? Align(
+                  alignment: Alignment.topCenter,
+                  child: SizedBox(
+                    width: _bannerAdTimerBottom!.size.width.toDouble(),
+                    height: _bannerAdTimerBottom!.size.height.toDouble(),
+                    child: AdWidget(ad: _bannerAdTimerBottom!),
+                  ),
+                )
+              : const SizedBox(
+                  height: 50,
+                ),
+          const Text(
+            'Timer',
+            style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w700),
+          ),
+        ],
+      )),
+      body: Center(
+          child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Container(),
-        const Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            StopwatchTimer(),
-            SizedBox(height: 48),
-            CountdownTimer(),
+            Container(),
+            const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                StopwatchTimer(),
+                SizedBox(height: 48),
+                CountdownTimer(),
+              ],
+            ),
           ],
         ),
-        (_bannerAdTimerBottom != null)
-            ? Align(
-                alignment: Alignment.topCenter,
-                child: SizedBox(
-                  width: _bannerAdTimerBottom!.size.width.toDouble(),
-                  height: _bannerAdTimerBottom!.size.height.toDouble(),
-                  child: AdWidget(ad: _bannerAdTimerBottom!),
-                ),
-              )
-            : const SizedBox(
-                height: 50,
-              ),
-      ],
-    ));
+      )),
+    );
   }
 }

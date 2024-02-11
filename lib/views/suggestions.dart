@@ -51,11 +51,28 @@ class _SuggestionsState extends State<Suggestions> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.only(top: 16.0),
-          child: Text(
-          'Suggestions',
-          style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w700),),
+        toolbarHeight: 100.0,
+        title: Column(
+          children: [
+            (_bannerAdSuggestionBottom != null)
+                ? Align(
+                    alignment: Alignment.topCenter,
+                    child: SizedBox(
+                      width: _bannerAdSuggestionBottom!.size.width.toDouble(),
+                      height: _bannerAdSuggestionBottom!.size.height.toDouble(),
+                      child: AdWidget(ad: _bannerAdSuggestionBottom!),
+                    ),
+                  )
+                : const SizedBox(
+                    height: 50,
+                  ),
+            const Center(
+              child: Text(
+                'Suggestions',
+                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w700),
+              ),
+            ),
+          ],
         ),
       ),
       body: Column(
@@ -68,30 +85,28 @@ class _SuggestionsState extends State<Suggestions> {
                   child: Center(
                     child: SingleChildScrollView(
                       scrollDirection: Axis.vertical,
-                      child: SizedBox(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SuggestionButton(
-                                getter: Word.getWords(), type: 'one word'),
-                            SuggestionButton(
-                              type: 'place',
-                              getter: Place.getPlaces(),
-                            ),
-                            SuggestionButton(
-                                getter:
-                                    HowTheyKnowEachOther.getHowTheyKnowEachOther(),
-                                type: 'how they know each other'),
-                            SuggestionButton(
-                                getter: Objects.getObjects(), type: 'object'),
-                            SuggestionButton(
-                                getter: Problem.getProblems(),
-                                type: 'problem they\'re trying to solve'),
-                            SuggestionButton(
-                                getter: UnusualEvent.getUnusualEvents(),
-                                type: 'unusual event'),
-                          ],
-                        ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SuggestionButton(
+                              getter: Word.getWords(), type: 'one word'),
+                          SuggestionButton(
+                            type: 'place',
+                            getter: Place.getPlaces(),
+                          ),
+                          SuggestionButton(
+                              getter: HowTheyKnowEachOther
+                                  .getHowTheyKnowEachOther(),
+                              type: 'how they know each other'),
+                          SuggestionButton(
+                              getter: Objects.getObjects(), type: 'object'),
+                          SuggestionButton(
+                              getter: Problem.getProblems(),
+                              type: 'problem they\'re trying to solve'),
+                          SuggestionButton(
+                              getter: UnusualEvent.getUnusualEvents(),
+                              type: 'unusual event'),
+                        ],
                       ),
                     ),
                   ),
@@ -99,23 +114,6 @@ class _SuggestionsState extends State<Suggestions> {
               ],
             ),
           ),
-          Column(
-            children: [
-              (_bannerAdSuggestionBottom != null)
-                  ? Align(
-                alignment: Alignment.topCenter,
-                child: SizedBox(
-                  width: _bannerAdSuggestionBottom!.size.width.toDouble(),
-                  height: _bannerAdSuggestionBottom!.size.height.toDouble(),
-                  child: AdWidget(ad: _bannerAdSuggestionBottom!),
-                ),
-              )
-                  : const SizedBox(
-                height: 50,
-              ),
-            ],
-          ),
-
         ],
       ),
     );
