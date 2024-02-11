@@ -14,9 +14,6 @@ class Timer extends StatefulWidget {
 class _TimerState extends State<Timer> {
   BannerAd? _bannerAdTimerBottom;
 
-  ///TODO: Fix the fact that all the elements move around when you pause (due to the extra button showing up)
-  ///Its fucking shitty
-
   @override
   void initState() {
     super.initState();

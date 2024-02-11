@@ -113,6 +113,9 @@ class _CountdownTimerState extends State<CountdownTimer> {
         // RESET
         Visibility(
           visible: !isCounting && time != '5:00',
+          maintainSize: true,
+          maintainAnimation: true,
+          maintainState: true,
           child: ElevatedButton.icon(
               icon: const Icon(Icons.refresh),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red),

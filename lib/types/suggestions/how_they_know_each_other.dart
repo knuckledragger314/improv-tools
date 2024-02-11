@@ -12,7 +12,7 @@ abstract class HowTheyKnowEachOther {
       'co-workers at Forever 21',
       'neighbors',
       'cousins',
-      'boss and employee at the factor',
+      'boss and employee at the factory',
       'on a bowling team together',
       'lobsters in the lobster tank at Red Lobster',
       'siblings',

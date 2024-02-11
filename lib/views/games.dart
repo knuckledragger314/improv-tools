@@ -22,7 +22,6 @@ class _GamesState extends State<Games> {
   @override
   void initState() {
     super.initState();
-    // COMPLETE: Load a banner ad
     BannerAd(
       adUnitId: AdHelper.bannerAdUnitIdGamesTop,
       request: const AdRequest(),
