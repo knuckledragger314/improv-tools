@@ -42,9 +42,6 @@ class _RulesState extends State<Rules> {
     super.dispose();
   }
 
-  ///TODO: Fix this. Preferred Size and/or toolbarHeight. Not sure if you need both.
-  ///TODO: put all the damn rules in a list so you can use a listview builder like the games
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +85,8 @@ class _RulesState extends State<Rules> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.only(left: 8.0, right: 8.0, top:8.0, bottom: 4.0),
+                              padding: const EdgeInsets.only(
+                                  left: 8.0, right: 8.0, top: 8.0, bottom: 4.0),
                               child: Text(
                                 ruleList[index].topLine,
                                 style: const TextStyle(
@@ -98,7 +96,8 @@ class _RulesState extends State<Rules> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.only(left:8.0, right: 8.0),
+                              padding:
+                                  const EdgeInsets.only(left: 8.0, right: 8.0),
                               child: Text(
                                 ruleList[index].summary,
                                 style: const TextStyle(

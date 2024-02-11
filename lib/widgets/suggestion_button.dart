@@ -11,12 +11,12 @@ class SuggestionButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(16.0),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
             backgroundColor: Colors.yellow,
             foregroundColor: Colors.deepPurple,
-            minimumSize: const Size(250, 40)),
+            minimumSize: const Size(325, 40)),
         onPressed: () {
           var result = [];
           result = getter;
@@ -57,7 +57,13 @@ class SuggestionButton extends StatelessWidget {
             ),
           );
         },
-        child: Text(type),
+        child: Text(
+          type,
+          style: const TextStyle(
+              color: Colors.deepPurple,
+              fontSize: 18,
+              fontWeight: FontWeight.w700),
+        ),
       ),
     );
   }

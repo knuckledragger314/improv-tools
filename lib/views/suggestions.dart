@@ -49,53 +49,73 @@ class _SuggestionsState extends State<Suggestions> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Scaffold(
+      appBar: AppBar(
+        title: const Padding(
+          padding: EdgeInsets.only(top: 16.0),
+          child: Text(
+          'Suggestions',
+          style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w700),),
+        ),
+      ),
+      body: Column(
         children: <Widget>[
           Container(),
+          Expanded(
+            child: Column(
+              children: [
+                Expanded(
+                  child: Center(
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.vertical,
+                      child: SizedBox(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SuggestionButton(
+                                getter: Word.getWords(), type: 'one word'),
+                            SuggestionButton(
+                              type: 'place',
+                              getter: Place.getPlaces(),
+                            ),
+                            SuggestionButton(
+                                getter:
+                                    HowTheyKnowEachOther.getHowTheyKnowEachOther(),
+                                type: 'how they know each other'),
+                            SuggestionButton(
+                                getter: Objects.getObjects(), type: 'object'),
+                            SuggestionButton(
+                                getter: Problem.getProblems(),
+                                type: 'problem they\'re trying to solve'),
+                            SuggestionButton(
+                                getter: UnusualEvent.getUnusualEvents(),
+                                type: 'unusual event'),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
           Column(
             children: [
-              const Text(
-                'Suggestions',
-                style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w700),
-              ),
-              const SizedBox(height: 16.0),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SuggestionButton(getter: Word.getWords(), type: 'one word'),
-                  SuggestionButton(
-                    type: 'place',
-                    getter: Place.getPlaces(),
-                  ),
-                  SuggestionButton(
-                      getter: HowTheyKnowEachOther.getHowTheyKnowEachOther(),
-                      type: 'how they know each other'),
-                  SuggestionButton(
-                      getter: Objects.getObjects(), type: 'object'),
-                  SuggestionButton(
-                      getter: Problem.getProblems(),
-                      type: 'problem they\'re trying to solve'),
-                  SuggestionButton(
-                      getter: UnusualEvent.getUnusualEvents(),
-                      type: 'unusual event'),
-                ],
+              (_bannerAdSuggestionBottom != null)
+                  ? Align(
+                alignment: Alignment.topCenter,
+                child: SizedBox(
+                  width: _bannerAdSuggestionBottom!.size.width.toDouble(),
+                  height: _bannerAdSuggestionBottom!.size.height.toDouble(),
+                  child: AdWidget(ad: _bannerAdSuggestionBottom!),
+                ),
+              )
+                  : const SizedBox(
+                height: 50,
               ),
             ],
           ),
-          (_bannerAdSuggestionBottom != null)
-              ? Align(
-                  alignment: Alignment.topCenter,
-                  child: SizedBox(
-                    width: _bannerAdSuggestionBottom!.size.width.toDouble(),
-                    height: _bannerAdSuggestionBottom!.size.height.toDouble(),
-                    child: AdWidget(ad: _bannerAdSuggestionBottom!),
-                  ),
-                )
-              : const SizedBox(
-                  height: 50,
-                ),
+
         ],
       ),
     );
