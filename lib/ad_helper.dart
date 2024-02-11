@@ -4,14 +4,14 @@ class AdHelper {
   static String get bannerAdUnitIdGamesTop {
     if (Platform.isAndroid) {
       //real mob ad id
-      //return 'ca-app-pub-5192244287661345/6080827618';
+      return 'ca-app-pub-5192244287661345/6080827618';
       //test ad below
-      return 'ca-app-pub-3940256099942544/6300978111';
+      //return 'ca-app-pub-3940256099942544/6300978111';
     } else if (Platform.isIOS) {
       //real mob ad id
-      //return 'ca-app-pub-5192244287661345/1915982202';
+      return 'ca-app-pub-5192244287661345/1915982202';
       //test ad below
-      return 'ca-app-pub-3940256099942544/2934735716';
+      //return 'ca-app-pub-3940256099942544/2934735716';
     } else {
       throw UnsupportedError('Unsupported platform');
     }
@@ -20,14 +20,14 @@ class AdHelper {
   static String get bannerAdUnitIdSuggestionBottom {
     if (Platform.isAndroid) {
       //real mob ad id
-      //return 'ca-app-pub-5192244287661345/2266663543';
+      return 'ca-app-pub-5192244287661345/2266663543';
       //test ad below
-      return 'ca-app-pub-3940256099942544/6300978111';
+      //return 'ca-app-pub-3940256099942544/6300978111';
     } else if (Platform.isIOS) {
       //real mob ad id
-      //return 'ca-app-pub-5192244287661345/1334035459';
+      return 'ca-app-pub-5192244287661345/1334035459';
       //test ad below
-      return 'ca-app-pub-3940256099942544/2934735716';
+      //return 'ca-app-pub-3940256099942544/2934735716';
     } else {
       throw UnsupportedError('Unsupported platform');
     }
@@ -36,14 +36,14 @@ class AdHelper {
   static String get bannerAdUnitIdRulesTop {
     if (Platform.isAndroid) {
       //real mob ad id
-      //return 'ca-app-pub-5192244287661345/8448750905';
+      return 'ca-app-pub-5192244287661345/8448750905';
       //test ad below
-      return 'ca-app-pub-3940256099942544/6300978111';
+      //return 'ca-app-pub-3940256099942544/6300978111';
     } else if (Platform.isIOS) {
       //real mob ad id
-      //return 'ca-app-pub-5192244287661345/8041556791';
+      return 'ca-app-pub-5192244287661345/8041556791';
       //test ad below
-      return 'ca-app-pub-3940256099942544/2934735716';
+      //return 'ca-app-pub-3940256099942544/2934735716';
     } else {
       throw UnsupportedError('Unsupported platform');
     }
@@ -52,14 +52,14 @@ class AdHelper {
   static String get bannerAdUnitIdTimerBottom {
     if (Platform.isAndroid) {
       //real mob ad id
-      //return 'ca-app-pub-5192244287661345/4509505899';
+      return 'ca-app-pub-5192244287661345/4509505899';
       //test ad below
-      return 'ca-app-pub-3940256099942544/6300978111';
+      //return 'ca-app-pub-3940256099942544/6300978111';
     } else if (Platform.isIOS) {
       //real mob ad id
-      //return 'ca-app-pub-5192244287661345/3716149037';
+      return 'ca-app-pub-5192244287661345/3716149037';
       //test ad below
-      return 'ca-app-pub-3940256099942544/2934735716';
+      //return 'ca-app-pub-3940256099942544/2934735716';
     } else {
       throw UnsupportedError('Unsupported platform');
     }
