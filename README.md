@@ -1,16 +1,23 @@
-# flutter_project_new_mac
+# Improv Tools
 
-A new Flutter project.
+Improv Tools provides improv suggestions, and provides various improv short form games. Improv Tools also has a refresher on the "rules" of improv, and a timer.
 
-## Getting Started
+## Need Help?
 
-This project is a starting point for a Flutter application.
+## FAQ
 
-A few resources to get you started if this is your first Flutter project:
+Q: Can I add my own suggestions?<br>
+A: No, but feel free to email us at the address below if you want us to add your suggestion!
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Q: Are there other longform or shortform improv games you can add to the app?<br>
+A: Maybe! Drop us a line at the email below and we may add more games.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Q: Why isn't the game I like to play listed? <br>
+A: Drop us a line at the email below to let us know what improv game you would like listed!
+
+Q: Why is the game I like called a different name?<br>
+A: Some games go by more than one name! Theres' no right or wrong name for a game!
+
+## Need more help?
+Email us at cedelen@protonmail.com
+
