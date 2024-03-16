@@ -6,7 +6,7 @@ Improv Tools provides improv suggestions, and provides various improv short form
 
 ## FAQ
 
-Q: Can I add my own suggestions?
+Q: Can I add my own suggestions?<br>
 A: No, but feel free to email us at the address below if you want us to add your suggestion!
 
 Q: Are there other longform or shortform improv games you can add to the app?
