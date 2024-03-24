@@ -59,6 +59,7 @@ class SuggestionButton extends StatelessWidget {
         },
         child: Text(
           type,
+          textAlign: TextAlign.center,
           style: const TextStyle(
               color: Colors.deepPurple,
               fontSize: 18,
