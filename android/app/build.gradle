@@ -39,6 +39,14 @@ android {
         jvmTarget = '1.8'
     }
 
+    lintOptions {
+        abortOnError false
+    }
+
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }

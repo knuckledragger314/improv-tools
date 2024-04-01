@@ -120,3 +120,9 @@ app.*.symbols
 #Ignore the 'android and ios' folder
  android/
  ios/
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
