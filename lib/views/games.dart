@@ -77,7 +77,7 @@ class _GamesState extends State<Games> {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: const Text('filter games here'),
+                        title: const Text('filter games by type'),
                         content: MultiSelectChip(
                             chipFilterList: allFiltersList,
                             selectedChoices: selectedFilters,
@@ -86,34 +86,11 @@ class _GamesState extends State<Games> {
                                 selectedFilters = selectedList;
                               });
                             }),
-                        actions: [
-                          TextButton(
-                            child: const Text('clear all'),
-                            onPressed: () {
-                              //clear all
-                              setState(() {
-                                selectedFilters = [];
-                                allFiltersList.removeRange(
-                                    0, allFiltersList.length);
-                              });
-                            },
-                          ),
-                          TextButton(
-                            child: const Text('done'),
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                          )
-                        ],
                       );
                     });
               },
             ),
           ),
-
-          ///TODO: have put a mic icon on buttons that require an emcee, a circle or line for circle/line games, 2/3/4 dots for 2/3/4 people?
-          ///mic_rounded, mic_sharp mic_off -- remove (line) -- radio_button_off (circle) -- person
-
           const Text(
             'Warm Up &',
             style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w700),
@@ -136,22 +113,25 @@ class _GamesState extends State<Games> {
                       gameList[index]
                           .headers
                           .any((element) => selectedFilters.contains(element)),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.yellow,
-                        foregroundColor: Colors.deepPurple),
-                    child: Text(
-                      gameList[index].title,
-                      style: const TextStyle(
-                          fontSize: 16, fontWeight: FontWeight.w700),
+                  child: Padding(
+                    padding: const EdgeInsets.all(4.0),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.yellow,
+                          foregroundColor: Colors.deepPurple),
+                      child: Text(
+                        gameList[index].title,
+                        style: const TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w700),
+                      ),
+                      onPressed: () {
+                        showGeneralDialog(
+                            context: context,
+                            pageBuilder: (_, __, ___) {
+                              return gameList[index];
+                            });
+                      },
                     ),
-                    onPressed: () {
-                      showGeneralDialog(
-                          context: context,
-                          pageBuilder: (_, __, ___) {
-                            return gameList[index];
-                          });
-                    },
                   ),
                 );
               },

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 
 class Feedback extends StatefulWidget {
-  const Feedback({Key? key}) : super(key: key);
+  const Feedback({super.key});
 
   @override
   State<Feedback> createState() => _FeedbackState();
@@ -15,7 +15,7 @@ class _FeedbackState extends State<Feedback> {
   bool isHTML = false;
 
   final _recipientController =
-      TextEditingController(text: 'charlie.edelen.4@gmail.com');
+      TextEditingController(text: 'cedelen@protonmail.com');
 
   final _subjectController =
       TextEditingController(text: 'Yes, AND the improv tool app...');
@@ -51,12 +51,36 @@ class _FeedbackState extends State<Feedback> {
     }
 
     if (!mounted) return;
+    if (platformResponse == 'success') {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(platformResponse),
+        ),
+      );
+    } else {
+      ///TODO: show a dialogu that says
+      ///'your default email application is not set up. Please send any bug, issue, or improvement to cedelen@protonmail.com
 
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(platformResponse),
-      ),
-    );
+      showDialog<void>(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: const Text(
+                  'Your default mobile email app is not set up. Please send any bug, issue, or improvement to cedelen@protonmail.com'),
+              actions: [
+                TextButton(
+                  child: const Text('close',
+                    style: TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.w700),
+                  ),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                )
+              ],
+            );
+          });
+    }
   }
 
   @override

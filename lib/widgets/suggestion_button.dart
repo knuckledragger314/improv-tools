@@ -2,12 +2,19 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class SuggestionButton extends StatelessWidget {
-  const SuggestionButton({super.key, required this.type, required this.getter});
+class SuggestionButton extends StatefulWidget {
+  SuggestionButton(
+      {super.key, required this.type, required this.getter, this.tempList});
 
   final String type;
   final List<String> getter;
+  List<String>? tempList;
 
+  @override
+  State<SuggestionButton> createState() => _SuggestionButtonState();
+}
+
+class _SuggestionButtonState extends State<SuggestionButton> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,12 +24,16 @@ class SuggestionButton extends StatelessWidget {
             backgroundColor: Colors.yellow,
             foregroundColor: Colors.deepPurple,
             minimumSize: const Size(325, 40)),
-        onPressed: () {
-          var result = [];
-          result = getter;
+        onPressed: () async {
+          if (widget.tempList?.isEmpty ?? true) {
+            widget.tempList = List.from(widget.getter);
+          }
+
           final random = Random();
-          var i = random.nextInt(result.length);
-          var text = result[i];
+          var i = random.nextInt(widget.tempList!.length);
+          var text = widget.tempList![i];
+          widget.tempList!.removeAt(i);
+          debugPrint(widget.tempList.toString());
           showDialog<String>(
             context: context,
             builder: (BuildContext context) => Dialog(
@@ -58,7 +69,7 @@ class SuggestionButton extends StatelessWidget {
           );
         },
         child: Text(
-          type,
+          widget.type,
           textAlign: TextAlign.center,
           style: const TextStyle(
               color: Colors.deepPurple,

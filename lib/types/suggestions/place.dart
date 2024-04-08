@@ -1,6 +1,7 @@
 abstract class Place {
   static List<String> getPlaces() {
-    var places = ['Miami',
+    var places = [
+      'Miami',
       'Subway restaurant',
       'North Pole',
       'inside an active volcano',
@@ -20,7 +21,7 @@ abstract class Place {
       'a Starbucks',
       'a waiting room',
       'the Cocoa Puffs factory',
-      'in a canoe floating down the Mississippi River'
+      'in a canoe floating down the Mississippi River',
       'a tree house',
       'a man cave',
       'a pumpkin patch',

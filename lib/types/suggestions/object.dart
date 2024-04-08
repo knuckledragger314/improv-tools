@@ -1,6 +1,7 @@
 abstract class Objects {
   static List<String> getObjects() {
-    var objects = ['door knob',
+    var objects = [
+      'door knob',
       'elephant',
       'scissors',
       'mirror',
@@ -78,7 +79,7 @@ abstract class Objects {
       'vanilla bean',
       'volume knob',
       'water hose',
-      'whoopie cushion'
+      'whoopie cushion',
       'waffle maker',
       'bottle of Windex',
       'X-Men comic book',
@@ -89,7 +90,8 @@ abstract class Objects {
       'yikes machine',
       'zoo chart',
       'zoology text book',
-      'zipper'];
+      'zipper'
+    ];
     return objects;
   }
 }

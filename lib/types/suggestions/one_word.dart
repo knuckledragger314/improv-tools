@@ -1,6 +1,7 @@
 abstract class Word {
   static List<String> getWords() {
-    var words = [ 'advisor',
+    var words = [
+      'advisor',
       'Atlantic',
       'absolutely',
       'almanac',
