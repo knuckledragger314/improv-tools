@@ -29,15 +29,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
-///TODO: proof read and format (bold), etc, all the games!!!
-///TODO: use AI to generate more words, unusual events, "how they know each other", etc.
-///TODO: currently trying to call MobileAds.instance.initialize() at main(),
-///still need to remove from futureBuilder below and test
-///TODO: Consider building a brand new app from scratch called improv tools not new app new mac or whatever dumb shit you called it
-///or google how easy you can change the name
-
 class ImprovToolsHome extends StatefulWidget {
-  const ImprovToolsHome({Key? key}) : super(key: key);
+  const ImprovToolsHome({super.key});
 
   @override
   State<ImprovToolsHome> createState() => _ImprovToolsHomeState();
@@ -108,12 +101,13 @@ class _ImprovToolsHomeState extends State<ImprovToolsHome> {
       //   },
       // ),
       body: Builder(
-        builder: (context) => InkWell(
-          onTap: () {
-            Scaffold.of(context).openDrawer();
-          },
-          child: _screens[selectedIndex],
-        ),
+        builder: (context) =>
+            InkWell(
+              onTap: () {
+                Scaffold.of(context).openDrawer();
+              },
+              child: _screens[selectedIndex],
+            ),
       ),
     );
   }

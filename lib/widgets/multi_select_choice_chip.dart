@@ -2,22 +2,21 @@ import 'package:flutter/material.dart';
 
 class MultiSelectChip extends StatefulWidget {
   final List<String> chipFilterList;
-  final List<String> selectedChoices;
+  List<String> selectedChoices;
   final Function(List<String>) onSelectionChanged;
 
-  const MultiSelectChip(
-      {required this.chipFilterList,
-      super.key,
-      required this.onSelectionChanged,
-      required this.selectedChoices});
+  MultiSelectChip({
+    super.key,
+    required this.chipFilterList,
+    required this.onSelectionChanged,
+    required this.selectedChoices,
+  });
 
   @override
   State<MultiSelectChip> createState() => _MultiSelectChipState();
 }
 
 class _MultiSelectChipState extends State<MultiSelectChip> {
-  List<String> selectedChoices = [];
-
   _buildChoiceList() {
     List<Widget> choices = [];
 
@@ -25,14 +24,15 @@ class _MultiSelectChipState extends State<MultiSelectChip> {
       choices.add(Container(
         padding: const EdgeInsets.all(2.0),
         child: ChoiceChip(
+          selectedColor: Colors.yellow,
           label: Text(item),
-          selected: selectedChoices.contains(item),
+          selected: widget.selectedChoices.contains(item),
           onSelected: (selected) {
             setState(() {
-              selectedChoices.contains(item)
-                  ? selectedChoices.remove(item)
-                  : selectedChoices.add(item);
-              widget.onSelectionChanged(selectedChoices);
+              widget.selectedChoices.contains(item)
+                  ? widget.selectedChoices.remove(item)
+                  : widget.selectedChoices.add(item);
+              widget.onSelectionChanged(widget.selectedChoices);
             });
           },
         ),
@@ -44,8 +44,45 @@ class _MultiSelectChipState extends State<MultiSelectChip> {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      children: _buildChoiceList(),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Wrap(
+          children: _buildChoiceList(),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            TextButton(
+              child: const Text(
+                'clear filters',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+              ),
+              onPressed: () {
+                //clear all
+                setState(() {
+                  widget.selectedChoices = [];
+                  widget.onSelectionChanged(widget.selectedChoices);
+                });
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0),
+              child: TextButton(
+                child: const Text(
+                  'close',
+                  style: TextStyle(
+                      fontSize: 20, fontWeight: FontWeight.w700),
+                ),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            )
+
+          ],
+        )
+      ],
     );
   }
 }
