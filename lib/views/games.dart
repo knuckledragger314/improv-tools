@@ -77,7 +77,7 @@ class _GamesState extends State<Games> {
                     context: context,
                     builder: (BuildContext context) {
                       return AlertDialog(
-                        title: const Text('filter games by type'),
+                        title: const Text('filter games by type', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w700, color: Colors.deepPurple)),
                         content: MultiSelectChip(
                             chipFilterList: allFiltersList,
                             selectedChoices: selectedFilters,
