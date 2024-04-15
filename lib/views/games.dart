@@ -14,7 +14,7 @@ class Games extends StatefulWidget {
 }
 
 class _GamesState extends State<Games> {
-  List<String> allFiltersList = GameFilters.getGameFilters();
+  Map<String, String> allFiltersList = GameFilters.getGameFilters();
   List<String> selectedFilters = [];
   List<GameDescription> gameList = AllGames.getAllGames();
   BannerAd? _bannerAdGamesTop;
@@ -79,7 +79,7 @@ class _GamesState extends State<Games> {
                       return AlertDialog(
                         title: const Text('filter games by type', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w700, color: Colors.deepPurple)),
                         content: MultiSelectChip(
-                            chipFilterList: allFiltersList,
+                            chipFilterList: allFiltersList.keys.toList(),
                             selectedChoices: selectedFilters,
                             onSelectionChanged: (selectedList) {
                               setState(() {
@@ -109,6 +109,7 @@ class _GamesState extends State<Games> {
               itemCount: gameList.length,
               itemBuilder: (BuildContext context, int index) {
                 return Visibility(
+                  ///TODO: Put this in a function, need to write unit test for it
                   visible: selectedFilters.isEmpty ||
                       gameList[index]
                           .headers
