@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_new_mac/types/games/game_filters.dart';
 
 class MultiSelectChip extends StatefulWidget {
   final List<String> chipFilterList;
@@ -17,18 +18,21 @@ class MultiSelectChip extends StatefulWidget {
 }
 
 class _MultiSelectChipState extends State<MultiSelectChip> {
+  Map<String, String> allFiltersList = GameFilters.getGameFilters();
   _buildChoiceList() {
     List<Widget> choices = [];
 
     for (var item in widget.chipFilterList) {
+      var index = widget.chipFilterList.indexOf(item);
       choices.add(Container(
         padding: const EdgeInsets.all(2.0),
         child: ChoiceChip(
           selectedColor: Colors.yellow,
-          label: Text(item),
+          label: Text(allFiltersList.values.toList()[index]),
           selected: widget.selectedChoices.contains(item),
           onSelected: (selected) {
             setState(() {
+              ///TODO: make filters a map. Display one value and filter on the other
               widget.selectedChoices.contains(item)
                   ? widget.selectedChoices.remove(item)
                   : widget.selectedChoices.add(item);

@@ -66,7 +66,9 @@ class _FeedbackState extends State<Feedback> {
           builder: (BuildContext context) {
             return AlertDialog(
               title: const Text(
-                  'Your default mobile email app is not set up. Please send any bug, issue, or improvement to cedelen@protonmail.com'),
+                  'Your default mobile email app is not set up. Please send feedback to: cedelen@protonmail.com',
+                style: TextStyle(
+                    fontSize: 20, fontWeight: FontWeight.w400)),
               actions: [
                 TextButton(
                   child: const Text('close',
